@@ -1,91 +1,106 @@
 body {
-  background-color: #2d8cda; 
-
-
-  font-family: Arial, sans-serif; 
-  text-align: center; 
-  background-color: #f1f1f1; 
-  padding: 20px; 
-  font-family: ' Rubik',sans-serif;
-
+  background-color: #f1f1f1;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 
 
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
 
+.container {
+  display: flex;
+  justify-content: center;
+}
 
-/*Inicio del header */
+.news-item {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  overflow: hidden;
+  margin: 20px;
+}
 
+.news-image {
+  max-width: 300px;
+  width: 40%;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px 0 0 8px;
+}
 
+.news-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.news-category {
+  font-size: 14px;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  font-size: 1.5em;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.news-meta {
+  font-size: 14px;
+  color: #adb5bd;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+  }
+
+  .news-image {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .news-content {
+    padding: 15px;
+  }
+}
+
+/* Header */
 .header {
-  position: relative;
   background-color: #5a9ecc;
-  width: 100%;
-  outline: none;
   padding: 10px;
-  box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 0px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 .header h1 {
-  margin: 0;
   color: white;
   font-size: 24px;
 }
 
-
-.header nav ul {
-  list-style: none; 
-  margin: 0;
-  padding: 0;
-}
-.header nav ul li {
-  margin: 0;
-  padding: 0;
-}
-.header nav a {
-  display: inline-block;
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-.header nav a:hover {
-  background-color: #04305f;
-}
-
-
-/*Fin del header */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Inicio del Menu */
-
-
 
 .menu {
   font-size: 16px;
@@ -123,7 +138,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0a3cff; /* Fondo del botón */
+  background-color: #0a3cff; 
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -144,15 +159,15 @@ body {
 .menu .item .submenu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinea elementos del submenu a la izquierda */
+  align-items: flex-start; 
   position: absolute;
   top: 100%;
-  left: 0; /* Ajusta el submenú para alinearlo hacia la izquierda */
+  left: 0;
   border-radius: 0 0 16px 16px;
   width: max-content;
   overflow: hidden;
   border: 1px solid #cccccc;
-  background-color: #5a9ecc; /* Fondo sólido para el submenú */
+  background-color: #5a9ecc; 
   opacity: 0;
   visibility: hidden;
   transform: translateY(-12px);
@@ -160,7 +175,7 @@ body {
   z-index: 1;
   pointer-events: none;
   list-style: none;
-  text-align: left; /* Alinea el texto a la izquierda */
+  text-align: left;
 }
 
 .menu .item:hover .submenu {
@@ -197,78 +212,73 @@ body {
   padding: 12px 24px;
   width: 100%;
   position: relative;
-  color: #ffffff; /* Cambia el color del texto para que contraste con el fondo */
-  text-align: left; /* Alinea el texto del enlace a la izquierda */
+  color: #ffffff; 
+  text-align: left; 
   transition: background-color 0.3s ease;
-  background-color: transparent; /* Fondo por defecto de las opciones del submenú */
+  background-color: transparent; 
 }
 
 .submenu .submenu-link:hover {
-  background-color: #1076e2; /* Fondo sólido al pasar el mouse */
-  color: #ffffff; /* Color del texto al pasar el mouse */
+  background-color: #1076e2; 
+  color: #ffffff; 
 }
 
 
 
 /*Fin del menu */
 
-
-
-
-
+/* Título principal */
 #titulo {
-  background-color: #5a9ecc;  
-  color: white;               
-  padding: 20px;              
-  text-align: center;         
-  border-radius: 19px;       
-  font-size: 2em;             
+  background-color: #5a9ecc;
+  color: white;
+  padding: 20px;
+  border-radius: 19px;
+  font-size: 2em;
+  margin: 20px 0;
 }
 
-
-h1{
-  color: rgb(0, 0, 0);
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px 20px;
   text-align: center;
-  font-size: 24px;
-
 }
 
-
-
-
-.nuevoEstilo{
-  color: rgb(18, 69, 236);
-  font-size: 33px;
-
-}
-video{
-  display: block;
-  margin: 0 auto;  
-  width: 500px;    
-}
-audio{
-  display: block;
-  margin: 0 auto;  
-  width: 500px;    
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: auto;
 }
 
-
-
-
- 
-
-
-
-
-
-
-p{
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-size: 27px;
-
+.footer-section {
+  margin: 20px 10px;
+  text-align: left;
 }
 
+.footer-section h3 {
+  color: #999;
+  margin-bottom: 10px;
+}
 
+.footer-section ul {
+  list-style: none;
+}
 
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
 
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-contact a {
+  color: #00bfff;
+}
+.footer-contact a:hover {
+  color: #fff;
+}
