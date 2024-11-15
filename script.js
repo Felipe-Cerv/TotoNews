@@ -1,3 +1,4 @@
+
 var Submenu = document.querySelector('.submenu');
 var openSubmenu = document.querySelector('.open_submenu');
 
@@ -14,4 +15,9 @@ document.addEventListener('click', function(e) {
       !openSubmenu.contains(e.target)) {
     Submenu.classList.remove('show');
   }
+});
+
+document.querySelector('a[href="#"]').addEventListener('click', function(event) {
+  event.preventDefault();
+  alert("¡Gracias por tu interés en apoyar nuestro proyecto!");
 });
